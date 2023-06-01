@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style> 
+    
+    .image { 
+        border-radius: 50%;
+    }
+    </style>
+</head>
+<body>
+  
+   <img src="C:\Users\narai\Pictures\opt.jpg" height="300px" width="300px" class="image">   
+  
+    <script>
+    var Profile = {
+
+        FirstName : "Narain",
+        LastName  : " Tata",
+        DateofBirth : "05/12/1997",
+        Gender : "Male",
+        PlaceofCountry : "India",
+        Race: "Asian",
+        Email : "naraintata@lewis.edu",
+        Phoneno : "8499029099",
+        Visastatus: "OPT",
+        Hobbies:[{Sports:["cricket","tennis","volleyball"]},{acheivements:"won multiple titles at university level"}],
+        Masters : "Lewis Uni",
+        Undergrad : "Griet"
+    }
+    console.log(Profile.Hobbies[0].Sports[2]);
+    </script>
+</body>
+</html>
