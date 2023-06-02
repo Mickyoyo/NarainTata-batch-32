@@ -1,0 +1,51 @@
+
+
+<html>
+    <body>
+        <h3>Amount is :</h3>
+   <p id = "para"></p>
+
+           <script>
+            var environment = prompt("Enter ENV");
+            var sendingamount1 =100;
+            
+            if(environment === "dev"){
+                sendingamount1=sendingamount1 + sendingamount1 * 0.1; //10%
+                
+            }
+             else if(environment === "test"){
+                sendingamount1 = sendingamount1 + sendingamount1  * 0.2; //20%
+            } 
+             else if(environment === "stage"){
+                sendingamount1 =sendingamount1 + sendingamount1* 0.3; //30%
+            
+            }
+             else if(environment === "prod"){
+                  sendingamount1 = sendingamount1 + sendingamount1  * 0.05; //5%
+            }
+            // var sendingamountElement = document.getElementById("sendingAmount");
+            console.log(sendingamount1);
+            
+            document.getElementById("para").textContent= sendingamount1;
+//senario
+              var sendingamount2 = 200;
+              switch (environment){
+                case "dev":
+                    sendingamount2 += sendingamount1 * 0.1;
+                    break;
+                case "test":
+                    sendingamount2 += sendingamount1 * 0.2;
+                    break;
+                case "stage":
+                    sendingamount2 += sendingamount1* 0.3;
+                    break;
+                case "prod":
+                    sendingamount2 += sendingamount1 * 0.05;
+                    break;
+               console.log(sendingamount1);
+               document.getElementById("para").textContent= sendingamount1;
+              }
+
+        </script>
+    </body>
+</html>
