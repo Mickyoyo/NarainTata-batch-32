@@ -1,0 +1,31 @@
+write a function to return all your hobbies in an array to console or on page. 
+
+And write a function to add a new hobbies to the existing list of hobbies.
+
+And create a function to delete the specific hobby that I pass from a list.
+<html>
+    <body>
+        <p>write a fuction to return hobbies and delete one</p>
+        <script>
+         let hobbies=["Playingfootball","Gocarting","riverDiving","Watchinganime"];
+         function printhobbies(){
+           return hobbies;
+        }
+        function addahobbie(printhobbies){
+        hobbies.push(printhobbies);
+        console.log(hobbies);
+        }
+        
+        function removeahobbie(getit){
+            hobbies=hobbies.filter(hobbie=>hobbie.toLowerCase()!=getit.toLowerCase());
+            console.log(hobbies);
+        }
+        addahobbie("Playing vollyball ");
+            
+
+
+
+       
+        </script>
+    </body>
+</html>
