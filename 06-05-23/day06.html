@@ -1,0 +1,40 @@
+<!-- Assignment : display input fields for all your profile information 
+FN, LN, DOB, email , phone number etc with submit button , on click of submit display all values in Dom -->
+<html>
+    <body>
+        <script>
+            function Printprofileinfo(){
+                let a1=  document.getElementById("fname").value;
+                let a2= document.getElementById("lname").value;
+                let a3= document.getElementById("email").value;
+                let a4= document.getElementById("number").value;
+                let a5= document.getElementById("dateofbirth").value;
+                let a6= document.getElementById("address").value  ;
+                // document.getElementById("Profileinfo").innerHTML="FirstName is"+a1;
+                // document.getElementById("Profileinfo").innerHTML="LastName is"+a2 ;
+                document.getElementById("Profileinfo").innerHTML="FirstName is"+a1+"<br>"+"LastName is"+a2+"<br>"+"EmailID is"+a3+"<br>" +"PhoneNumber is"+a4+"<br>"+"DateofBirth is"+a5+"<br>" +"Address is"+a6+"<br>";
+
+            } 
+        </script>
+        <div>
+            <label for="fname"> First Name:</label>
+            <input type="text" id="fname" ><br>
+            <lable for="lname"> Last Name:</lable>
+            <input type="text" id="lname" ><br>
+            <lable for="email"> EmailID:</lable>
+            <input type="text" id="email" ><br>
+            <lable for="number"> PhoneNumber</lable>
+            <input type="text" id="number" ><br>
+            <label for="dateofbirth"> DateofBirth:</label>
+            <input type="date" id="dateofbirth" ><br>
+            <label for="address"> Address:</label>
+            <input type="text" id="address" ><br>
+            <button onclick="Printprofileinfo()">submit</button>
+            
+
+
+        </div>
+        <span id="Profileinfo"></span>
+
+    </body>
+</html>
