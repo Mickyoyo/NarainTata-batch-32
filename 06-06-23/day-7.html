@@ -1,0 +1,82 @@
+<!-- Create a form with your profile information with respective text fields 
+Ex: firstname  , lastname , gender, email , phnno, hobbies(with checkboxes), dob 
+  
+On submit display all the values below the forms -->
+<html>
+    <head>
+        <title></title>FormforProfileinformation 
+    </head>
+    <body>
+        
+        <div id="FillProfile">
+        <form id="Profileinfo">
+        <label name="firstname">Firstname:</label>
+        <input type="text" id="firstname" name="firstname" required><br>
+        <lable name="lastname">Lastname:</lable>
+        <input type="text" id="lastname" name="lastname" required><br>
+        <label name="gender"> Gender:</label><br>
+        <lable name="gender1">Male</lable>
+        <input type="radio" id="gender1" name="gender" value="Male">
+        <lable name="gender2">Female</lable>
+        <input type="radio" id="gender2" name="gender" value="Female">
+        <br>
+        <label name="email">EmailID:</label>
+        <input type="text" id="email" name="email" required><br>
+        <label namae="phonenumber">PhoneNumber:</label>
+        <input type="text" id="phonenumber" name="phonenumber" required><br>
+        <label name="hobbies">Hobbies:</label><br>
+        <lable for="hobbie1">Cricket</label>
+        <input type="checkbox" id="hobbie1" name="hobbies"value="Cricket"><br>
+        <lable for="hobbie2">Football</lable>
+        <input type="checkbox" id="hobbie2" name="hobbies" value="Football"><br>
+        <label for="hobbie3">GoCarting</label>
+        <input type="checkbox" id="hobbie3" name="hobbies" value="GoCarting"><br>
+        <lable name="dateofbirth">DateofBirth</lable><br>
+        <input type="date" id="dateofbirth" name="dateofbirth" required><br>
+        <div>
+            <input type="button" onclick="FillProfile(event)" value="submit"> 
+        </div>
+        <p id=a1></p>
+
+    </form>
+    </div>
+
+        <script>
+             function FillProfile(e){
+                e.preventDefault();
+                let a1=  document.getElementById("firstname").value;
+                let a2= document.getElementById("lastname").value;
+                let a3= document.getElementById("gender").value;
+                let a4= document.getElementById("email").value;
+                let a5= document.getElementById("phonenumber").value;
+              //  let a6= document.getElementById("hobbies").value;
+                let a7= document.getElementById("dateofbirth").value  ;
+           
+                document.getElementById("FillProfile").innerHTML = "Firstname :" + a1 + "<br>" + "Lastname :" + a2 + "<br>"
+                 + "Gender :" +a3+  "<br>" + "EmailID :" + a4 + "<br>" + "PhoneNumber :" + a5 + "<br>" + "Hobbies :" +a6+ "<br>";"DateofBirth :" + a7 + "<br>";
+              
+        let hobbies = "";
+        let checkboxes = document.getElementsByName("hobbies");
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                hobbies += checkboxes[i].value + ", ";
+            }
+        }
+
+
+             }
+             
+        </script>
+     <div id="FillProfile"></div>
+
+    </body>
+</html>
+
+
+
+<!-- <label name="gender"> Gender:</label>
+        <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        </select><br> -->
