@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            var pop={
+                num : [5,4,3,2,1]
+
+            }
+
+
+            pop.__proto__.mets = function () {
+
+                return this.num.sort()[1];
+                
+            }
+
+            console.log(pop.mets())
+        </script>
+    </body>
+</html>
